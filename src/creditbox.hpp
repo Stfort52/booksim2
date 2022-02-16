@@ -10,10 +10,10 @@
 class CreditBox : public Box<Credit>
 {
 public:
-  uint32_t OutStanding();
+  uint32_t OutStanding() const;
 };
 
-inline uint32_t CreditBox::OutStanding()
+inline uint32_t CreditBox::OutStanding() const
 {
   return all_items.size() - free_items.size();
 }
